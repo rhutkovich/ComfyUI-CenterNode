@@ -16,6 +16,8 @@ class BBoxCrop:
     CATEGORY (str): 
         Specifies the category the node should appear in the UI.
     """
+    def __init__(self):
+        pass
 
     @classmethod
     def INPUT_TYPES(cls):
