@@ -16,8 +16,6 @@ class BBoxCrop:
     CATEGORY (str): 
         Specifies the category the node should appear in the UI.
     """
-    def __init__(self):
-        pass
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -31,10 +29,10 @@ class BBoxCrop:
         """
         return {
             "required": {
-                "left": ("INT"),
-                "top": ("INT"),
-                "right": ("INT"),
-                "bottom": ("INT"),
+                "left": ("INT", ),
+                "top": ("INT", ),
+                "right": ("INT", ),
+                "bottom": ("INT", ),
                 "crop_width": ("INT", {"default": 50}),
                 "crop_height": ("INT", {"default": 50})
             },
