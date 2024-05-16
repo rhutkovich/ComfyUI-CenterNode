@@ -16,6 +16,7 @@ class BBoxCrop:
     CATEGORY (str): 
         Specifies the category the node should appear in the UI.
     """
+
     def __init__(self):
         pass
 
@@ -31,10 +32,10 @@ class BBoxCrop:
         """
         return {
             "required": {
-                "left": ("INT", ),
-                "top": ("INT", ),
-                "right": ("INT", ),
-                "bottom": ("INT", ),
+                "left": "INT",
+                "top": "INT",
+                "right": "INT",
+                "bottom": "INT",
                 "crop_width": ("INT", {"default": 50}),
                 "crop_height": ("INT", {"default": 50})
             },
@@ -75,6 +76,7 @@ class BBoxCrop:
         crop_top_left_y = max(bbox_center_y - crop_height // 2, 0)
 
         return (int(crop_top_left_x), int(crop_top_left_y))
+
 
 # Dictionary to map node classes to their names
 NODE_CLASS_MAPPINGS = {
